@@ -1,0 +1,4 @@
+.idea/vcs.xml
+/vendor
+/composer.phar
+composer.lock   
