@@ -1,12 +1,11 @@
 <?php
 
 
-use Behat\Behat\Context\ClosuredContextInterface,
-		Behat\Behat\Context\TranslatedContextInterface,
-		Behat\Behat\Context\BehatContext,
-		Behat\Behat\Exception\PendingException;
-use Behat\Gherkin\Node\PyStringNode,
-		Behat\Gherkin\Node\TableNode;
+use Behat\Behat\Tester\Exception\PendingException;
+use Behat\Behat\Context\Context;
+use Behat\Behat\Context\SnippetAcceptingContext;
+use Behat\Gherkin\Node\PyStringNode;
+use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
 
 // Require 3rd-party libraries here:
@@ -18,21 +17,36 @@ use Behat\MinkExtension\Context\MinkContext;
 /**
  * Features context.
  */
-class FeatureContext extends MinkContext
+class FeatureContext extends MinkContext implements Context, SnippetAcceptingContext
 {
 	/**
 	 * Initializes context.
 	 * Every scenario gets it's own context object.
 	 *
-	 * @param array $parameters context parameters (set them up through behat.yml)
+	 * @internal param array $parameters context parameters (set them up through behat.yml)
 	 */
 	public function __construct()
 	{
 			// $this->wp_users = $parameters['wp_users'];
 	}
 
+	/**
+	 * @When I click on settings
+	 */
+	public function iClickOnSettings()
+	{
+		throw new PendingException();
+	}
 
-
+	/**
+	 * @When I click on Admin
+	 */
+	public function iClickOnAdmin()
+	{
+		throw new PendingException();
+	}
+	
+	///////////////////////////-----------OLD---------/////////////////////////////////
 	/**
      * Click on the element with the provided xpath query
      *

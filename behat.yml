@@ -1,18 +1,15 @@
 default:
-    paths:
-        features: features
-        bootstrap: %behat.paths.features%/bootstrap
     extensions:
-        Behat\MinkExtension\Extension:
+        Behat\MinkExtension:
             show_cmd: '/Applications/Firefox.app/Contents/MacOS/firefox %s'
-            base_url: 'http://localhost:8888/kanban/board'
+            base_url: localhost:8888/kanban/board
             sessions:
-                javascript:
+                default:
                     selenium2: ~
     suites:
         admin:
             paths: [ %paths.base%/features/admin ]
-            contexts: [ AdminContext ]
+            contexts: [ FeatureContext ]
         board:
             paths: [ %paths.base%/features/board ]
-            contexts: [ BoardContext ]
+            contexts: [ FeatureContext ]

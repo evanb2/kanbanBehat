@@ -20,9 +20,14 @@ class ComposerStaticInitfb5f4ebca25a411f0f90158383e2df5a
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\DependencyInjection\\' => 38,
+            'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\ClassLoader\\' => 30,
+        ),
+        'B' => 
+        array (
+            'Behat\\Mink\\' => 11,
         ),
     );
 
@@ -51,6 +56,10 @@ class ComposerStaticInitfb5f4ebca25a411f0f90158383e2df5a
         array (
             0 => __DIR__ . '/..' . '/symfony/dependency-injection',
         ),
+        'Symfony\\Component\\CssSelector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/css-selector',
+        ),
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
@@ -62,6 +71,10 @@ class ComposerStaticInitfb5f4ebca25a411f0f90158383e2df5a
         'Symfony\\Component\\ClassLoader\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/class-loader',
+        ),
+        'Behat\\Mink\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/behat/mink/src',
         ),
     );
 
@@ -75,6 +88,10 @@ class ComposerStaticInitfb5f4ebca25a411f0f90158383e2df5a
             'Behat\\Testwork' => 
             array (
                 0 => __DIR__ . '/..' . '/behat/behat/src',
+            ),
+            'Behat\\MinkExtension' => 
+            array (
+                0 => __DIR__ . '/..' . '/behat/mink-extension/src',
             ),
             'Behat\\Gherkin' => 
             array (
