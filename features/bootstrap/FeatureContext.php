@@ -117,6 +117,25 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
         $this->assertElementOnPage('.task');
     }
 
+    /**
+     * @When I delete that task
+     */
+    public function iDeleteThatTask()
+    {
+        $page = $this->getSession()->getPage();
+        $page->find('css', 'a.task-id')->click();
+        $page->find('css', 'a.btn-task-delete')->click();
+        $this->iWaitForTheAjaxResponse();
+    }
+
+    /**
+     * @Then I should not see that task
+     */
+    public function iShouldNotSeeThatTask()
+    {
+        $this->assertElementNotOnPage('div.task');
+    }
+
     /////////////////////--------ADMIN-------///////////////////////
 
     /**
